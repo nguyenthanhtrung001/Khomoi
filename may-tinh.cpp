@@ -1,43 +1,20 @@
-
-
-#include <iostream>
+#include<stdio.h>
 using namespace std;
-int i, j, n, b;
-int a[50];
-
-
-int main()
+void nhapso(int &a)
 {
-    cout << "ban muon xuat may ban cuu chuong:";
-    cin >> n;
-    cout << "\nDo la ban cuu chuong nao?\n";
-    for (i = 0; i < n; i++)
-    {
-        cout << "\nbang cuu chuong:";
-        cin >> a[i];
-    }
-  
-    
-    for (i = 0; i <n; i++)
-    {
-        
-        
-        for (j = 1; j <=10; j++)
-        {
-            
-           b= a[i] * j;
-           
-           cout <<"\t\t\t"<< a[i] << " x " << j << " = " << b;
-           cout << "\n";
-           
-
-        }
-        cout << "\n";
-    }
-    
-return 0;
-
+    cout << "Nhap gia tri:";
+    cin >> a;
 }
 
-
-
+int main() 
+{
+    int n, mang[100];
+    cout << "Ban su dung bao nhieu so cho phep tinh ?\n";
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "So thu " << i + 1 << "\n";
+        nhapso(a[i]);
+    }
+    return 0;
+}
